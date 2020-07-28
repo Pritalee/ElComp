@@ -1,0 +1,165 @@
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="p2">
+  <div *ngIf="!valid"> 
+    <button type="button" class="button" (click)="back()" id="back"><<</button>
+      <br>
+        <button type="button" class="button" (click)="getCars()" id="data">GET DATA</button>
+
+      
+      
+    <div *ngFor="let h of cars">
+          <div id="bl">
+              <div class="card" style="width: 300px">
+                  <div class="card-body">{{h && h[0].name}}
+                         <br>
+                  
+                      <img [src]="h && h[0].photo" id="im"> 
+                  
+                          <ng-template #content let-modal>
+                              <div class="modal-header">
+                                      <h3 class="modal-title" id="modal-basic-title">{{h && h[0].name}}</h3>
+                                      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                              <div class="modal-body">
+                              
+                                  <div *ngFor="let obj of h">
+                                      <div class="card" style="width: 25rem;">
+                                            <br>
+                                          <img [src]="obj.photo" style="width:80px; height:80px">
+                                          {{obj.name}}
+                                          <br>
+                                          Color-{{obj.color}}
+                                          <br>
+                                          {{obj.space}}
+                                          <br>
+                                          Rs.{{obj.price}}
+                                          <br>
+                                          {{obj.rating }}
+                                          <br>
+                                          {{obj.company }}
+                                          <br>
+                                          
+                                          <a target="_blank" href="{{obj.link}}">Go to site</a>
+                                          
+                                        <hr>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-info" (click)="modal.dismiss('Close click')">Close</button>
+                                    </div>
+                            </ng-template>
+                
+                      <br>
+                      <br>
+                    <button type="button" id="view" (click)="open(content)" >View</button>    
+                </div>
+            </div>
+        </div>
+      </div> 
+</div>
+
+
+
+  <div *ngIf="valid">
+    <app-pg1></app-pg1>
+  </div>
+
+</div> 
+</html>
+
+
+
+
+
+<!-- 
+<div class="p2">
+    <div *ngIf="!valid"> 
+      <button type="button" class="button" (click)="back()">Back</button>
+          <br>
+      <button type="button" class="button" (click)="getCars()">GET DATA</button>
+  
+        
+        
+        <div *ngFor="let h of cars"> 
+             
+             <span id="bl">
+
+
+
+                  <div class="card-group">
+                      <div class="card" *ngFor="let h of cars">
+                          <img class="card-img-top img-fluid " [src]="h && h[0].photo" alt="Card image cap">
+                          <div class="card-body">
+                              <h5 class="card-title">{{h && h[0].name}}</h5>
+                              <p class="card-text">hello elcomp/p>
+                             
+                
+  
+                   <div class="card" style="width: 400px">
+                        <div class="card-body">{{h && h[0].name}}
+                            <div class="card img-fluid" style="width:500px">
+                                <img class="card-img-top" src="assets/img/Web1.png" alt="Card image" style="width:100%">
+                                <div class="card-img-overlay">
+                    <br>
+                    <br>
+                    <img [src]="h && h[0].photo" style="width:150px; height:150px; margin-left: auto;margin-right: auto;"> 
+                    
+                    <br>
+                    <br> 
+               
+              
+                <ng-template #content let-modal>
+                      <div class="modal-header">
+                          <h3 class="modal-title" id="modal-basic-title">{{h && h[0].name}}</h3>
+                          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                          <div *ngFor="let obj of h">
+  
+                            <img [src]="obj.photo" style="width:80px; height:80px">
+                            {{obj.name}}
+                            <br>
+                            {{obj.color}}
+                            <br>
+                            {{obj.space}}
+                            <br>
+                            {{obj.price}}
+                            <br>
+                            {{obj.rating }}
+                            <br>
+                            {{obj.company }}
+                            <br>
+                            
+                            <a target="_blank" href="{{obj.link}}">Go to site</a>
+                            <br>
+                            <hr>
+                          </div>
+                      </div> 
+                      
+                  </ng-template>
+                  <br>
+                  
+                  <button type="button" id="view" (click)="open(content)" style=" right: 0; bottom: 0; background-color: #fe446c; width:200px; height:50px;">View</button>    
+                </div>
+              </div>
+            </div>
+         </div> 
+              </span>
+            
+          </div>
+        </div>
+  
+    <div *ngIf="valid">
+      <app-pg1></app-pg1>
+    </div>
+  </div>
+  
+-->   
+
+ 

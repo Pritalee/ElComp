@@ -1,0 +1,144 @@
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <body background="http://www.artaict.com/Upload/Sliceshow/277b8bba639f47b0be6d7d9c027bb9c1.jpg">
+
+  
+      <div *ngIf="!isValid" id="blo">
+    
+      <!-- <img src="assets/img/Web1.png"> -->
+    
+      <div *ngIf="!isValid" >
+          <h1 class="h1">ELCOMP</h1>
+        <nav class="navbar navbar-expand-sm bg-light">
+          <ul class="navbar-nav">
+            <li class="navitem">
+                <a target="_blank" href="https://www.google.com/maps/search/electronic+shops" class="a">Locate stores</a>
+
+            </li>
+            <!-- <li class="navitem">
+                <a class="nav-link" href="https://www.google.com/maps/search/electronic+shops">contact us</a>
+
+            </li> -->
+          </ul>
+              </nav>
+        
+          <div class="card-deck">
+              <div class="card" >
+                  <div class="card-body">
+
+                  <img src="assets/img/iphone.jpg" alt="Avatar" class="c" style=" width: 350px;height: 200px;">
+                  <div class="container">
+                    
+                    <button type="button"  class="b" id="IPHONE" (click)="next($event)">IPHONE</button>
+                  </div>
+                </div>
+              </div>
+            
+             
+              <div class="card" >
+                  <div class="card-body">
+
+                  <img src="assets/img/samsung.jpg" alt="Avatar" class="c"style=" width: 350px;height: 200px;">
+                  <div class="container">
+                    
+                    <button type="button"  class="b" id="SAMSUNG" (click)="next($event)">SAMSUNG</button> 
+                  </div>
+                </div>
+              </div>
+            
+              <div class="card">
+                  <div class="card-body">
+
+                    <img src="assets/img/redmi.png" alt="Avatar" class="c"style=" width: 200px;height: 200px;">
+                    <div class="container">
+                      
+                      <button type="button"  class="b" id="REDMI" (click)="next($event)">REDMI</button> 
+                    </div>
+                  </div>
+                </div>
+         
+        </div>
+        <br>
+        <br>
+        <br>
+              <div class="card-deck">
+                <div class="card">
+                  <div class="card-body">
+
+                      <img src="assets/img/vivo.jpg" alt="Avatar" class="c"style=" width: 350px;height: 200px;">
+                      <div class="container">
+                        
+                        <button type="button"  class="b" id="VIVO" (click)="next($event)">VIVO</button> 
+                      </div>
+                    </div>
+                  </div>
+        
+
+                <div class="card">
+                  <div class="card-body">
+
+                        <img src="assets/img/oppo.png" alt="Avatar" class="c"style=" width: 350px;height: 200px;">
+                        <div class="container">
+                          
+                          <button type="button"  class="b" id="OPPO" (click)="next($event)">OPPO</button> 
+                        </div>
+                      </div>
+                    </div>
+            
+                <div class="card">
+                  <div class="card-body">
+
+                          <img src="assets/img/moto.jpg" alt="Avatar" class="c" style=" width: 300px;height: 200px;">
+                          <div class="container">
+                           
+                            <button type="button"  class="b" id="MOTO" (click)="next($event)">MOTO</button> 
+                          </div>
+                        </div>
+                      </div>
+              </div>              
+              <br>
+              <br>
+              <br>
+                    <div class="card-deck">
+                      <div class="card">
+                        <div class="card-body">
+      
+                            <img src="assets/img/asus.jpg" alt="Avatar" class="c"style=" width: 350px;height: 200px;">
+                            <div class="container">
+                              
+                              <button type="button"  class="b" id="ASUS" (click)="next($event)">ASUS</button> 
+                            </div>
+                          </div>
+                        </div>
+              
+      
+                      <div class="card">
+                        <div class="card-body">
+      
+                              <img src="assets/img/Lenovo1.jpg" alt="Avatar" class="c"style=" width: 350px;height: 200px;">
+                              <div class="container">
+                                
+                                <button type="button"  class="b" id="LENOVO" (click)="next($event)">LENOVO</button> 
+                              </div>
+                            </div>
+                          </div>
+                  
+                      <div class="card">
+                        <div class="card-body">
+      
+                                <img src="assets/img/lg.png" alt="Avatar" class="c" style=" width: 300px;height: 200px;">
+                                <div class="container">
+                                 
+                                  <button type="button"  class="b" id="LG" (click)="next($event)">LG</button> 
+                                </div>
+                              </div>
+                            </div>
+            </div>                 
+        </div>      
+    </div>
+      <div id="next">  
+          <app-pg2 [val]=id *ngIf="isValid" ></app-pg2>
+        </div>
+</body>
+</html>
+
